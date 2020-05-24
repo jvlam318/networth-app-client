@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
+// components
 import Networthgraph from '../components/Networthgraph';
+import Profile from '../components/Profile';
 
 class home extends Component {
   state = {
@@ -19,14 +21,13 @@ class home extends Component {
   }
 
   render() {
-    let networthHistory = this.state.networthHistory ? networthHistory : <p>Loading...</p>
     return (
       <Grid container spacing={8}>
         <Grid item sm={8} xs={12}>
-          <Networthgraph networthHistory={networthHistory} />
+          <Networthgraph />
         </Grid>
         <Grid item sm={4} xs={12}>
-          <p>Summary</p>
+          <Profile />
         </Grid>
       </Grid>
     )
