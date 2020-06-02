@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
 import EditDetails from './EditDetails';
+import MyButton from '../utilities/MyButton';
 // MUI stuff
 import Button from '@material-ui/core/Button';
 import MuiLink from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
 // icons
 import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 // redux stuff
@@ -87,11 +86,9 @@ class Profile extends Component {
               <hr />
             </Fragment>
           </div>
-          <Tooltip title='Logout' placement='top'>
-            <IconButton onClick={this.handleLogout}>
-              <KeyboardReturn color='primary' />
-            </IconButton>
-          </Tooltip>
+          <MyButton tip="Logout" onClick={this.handleLogout}>
+            <KeyboardReturn color="primary" />
+          </MyButton>
           <EditDetails />
         </div>
       </Paper>
