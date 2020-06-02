@@ -4,7 +4,7 @@ class networthgraph extends Component {
   render() {
     return (
       <div>
-        <h1>Graph graph</h1>
+        <h1>Graph ... </h1>
       </div>
     )
   }
